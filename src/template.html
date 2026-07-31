@@ -3,7 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
+    <title>Atlas Weather</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="container-left">
+        <div class="logo">
+          <h3>Atlas Weather</h3>
+        </div>
+        <div class="main-weather-data">
+          <div class="main-weather-temperature">08&deg;</div>
+          <div class="main-weather-details">
+            <div>
+              <h1>Siguatepeque</h1>
+              <p>06:09-Sunday, 6 Oct 2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="glass-card container-right">
+        <div class="search-form-container">
+          <form>
+            <label for="location" hidden>Location</label>
+            <input
+              type="text"
+              name="location"
+              id="location"
+              placeholder="Search location"
+            />
+            <button aria-label="Search">
+              <img
+                src="./assets/icons/search-icon.svg"
+                alt="search-icon"
+                width="1.8em"
+              />
+            </button>
+          </form>
+        </div>
+        <div class="recent-searches">
+          <h2>Recently Viewed</h2>
+          <ul>
+            <li>Siguatepeque</li>
+            <li>Spain</li>
+            <li>Norway</li>
+            <li>Tegucigalpa</li>
+          </ul>
+        </div>
+        <hr />
+        <div class="location-weather-details">
+          <h2>Weather Details</h2>
+          <ul>
+            <li><span>Cloudy</span><span>86%</span></li>
+            <li><span>Humidity</span><span>62%</span></li>
+            <li><span>Wind</span><span>8km/h</span></li>
+            <li><span>Rain</span><span>8mm</span></li>
+          </ul>
+        </div>
+        <hr />
+      </div>
+    </div>
+  </body>
 </html>

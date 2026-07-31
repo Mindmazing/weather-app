@@ -1,0 +1,155 @@
+@font-face {
+  font-family: "Roboto";
+  src:
+    url("../assets/fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../assets/fonts/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --primary-color: #f5f5f5;
+  --secondary-color: #f5f5f5bc;
+
+  --border: 1px solid var(--secondary-color);
+  --transition-time: 0.3s;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--primary-color);
+}
+
+p {
+  color: var(--secondary-color);
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+.glass-card {
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.28);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.3px);
+  -webkit-backdrop-filter: blur(5.3px);
+}
+
+/* Container styles */
+.container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../assets/images/rainy-state.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container > div {
+  width: 100%;
+  height: 100%;
+}
+
+.container-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3em 5em 6em 5em;
+}
+
+.main-weather-data {
+  display: flex;
+  align-items: end;
+  gap: 1em;
+}
+
+.main-weather-temperature {
+  font-size: 8rem;
+  line-height: 0.8;
+}
+
+.container-right {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.container-right {
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.search-form-container form {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.search-form-container input {
+  background: none;
+  border: none;
+  border-bottom: var(--border);
+  padding: 0.5em 0;
+  color: inherit;
+  flex: 1;
+}
+
+.search-form-container input:focus {
+  outline: none;
+}
+
+.search-form-container button {
+  border: none;
+  padding: 1em;
+  background: none;
+  cursor: pointer;
+}
+
+.search-form-container button img {
+  width: 1.8em;
+  margin-top: 0.7em;
+  transition: var(--transition-time);
+}
+
+.search-form-container button img:hover {
+  opacity: 0.6;
+}
+
+/* recently viewed */
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  list-style: none;
+  padding: 0;
+  color: var(--secondary-color);
+}
+
+.container-right h2 {
+  margin-bottom: 2.5em;
+}
+
+.location-weather-details li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.location-weather-details li span:last-child {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+hr {
+  border: none;
+  border-bottom: var(--border);
+}
