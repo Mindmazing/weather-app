@@ -12,6 +12,8 @@ export const DomElements = (() => {
   const detailsHumidityPercentage = document.querySelector(".humidity-percentage");
   const detailsWindSpeed = document.querySelector(".wind-speed");
 
+  const recentSearches = document.querySelector(".recent-searches ul");
+
   // containers
   const weatherDetailsContainer = document.querySelector(".location-weather-details");
   const mainWeatherDataContainer = document.querySelector(".main-weather-data");
@@ -25,6 +27,7 @@ export const DomElements = (() => {
     detailsHumidityPercentage,
     detailsWindSpeed,
     weatherDetailsContainer,
-    mainWeatherDataContainer
+    mainWeatherDataContainer,
+    recentSearches
   };
 })();
