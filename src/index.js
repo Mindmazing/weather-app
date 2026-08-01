@@ -24,12 +24,14 @@ DomElements.searchBar.addEventListener("submit", (e) => {
   // Start Loading State
     DomElements.mainWeatherDataContainer.classList.add("loading-effect");
     DomElements.weatherDetailsContainer.classList.add("loading-effect");
+    DomElements.locationName.style.filter = "blur(5px)";
 
   // trigger get weather function
   getWeather(location).then((weatherData) => {
      // End loading state
     DomElements.mainWeatherDataContainer.classList.remove("loading-effect");
     DomElements.weatherDetailsContainer.classList.remove("loading-effect");
+    DomElements.locationName.style.filter = "none";
 
     // change weather temperature and location
     DomElements.locationName.textContent = weatherData.locationName;
@@ -46,6 +48,10 @@ DomElements.searchBar.addEventListener("submit", (e) => {
     // update recent searches
     recentSearches.unshift(weatherData.locationName);
     displayRecentSearches();
+}).catch((error) => {
+    DomElements.locationName.textContent = "No location found";
+    DomElements.locationName.style.filter = "none";
+    DomElements.weatherTemperature.textContent = "00.0"+ "\u00B0C";
 });
 });
 

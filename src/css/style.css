@@ -68,7 +68,6 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 1em;
-
 }
 
 .main-weather-data * {
@@ -165,6 +164,10 @@ hr {
   border-bottom: var(--border);
 }
 
-.loading-effect * {
+.loading-effect p, .loading-effect li > *, .loading-effect h1, .loading-effect .main-weather-temperature {
   filter: blur(5px)
+}
+
+.recent-searches {
+  flex: 1;
 }
