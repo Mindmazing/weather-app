@@ -46,7 +46,7 @@ h2 {
 
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("../assets/images/rainy-state.jpg");
+    url("../assets/images/sunny-state.jpg");
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -164,8 +164,11 @@ hr {
   border-bottom: var(--border);
 }
 
-.loading-effect p, .loading-effect li > *, .loading-effect h1, .loading-effect .main-weather-temperature {
-  filter: blur(5px)
+.loading-effect p,
+.loading-effect li > *,
+.loading-effect h1,
+.loading-effect .main-weather-temperature {
+  filter: blur(5px);
 }
 
 .recent-searches {
