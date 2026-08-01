@@ -22,13 +22,14 @@ DomElements.searchBar.addEventListener("submit", (e) => {
     DomElements.locationName.textContent = weatherData.locationName;
     DomElements.weatherTemperature.textContent =
     weatherData.temperature + "\u00B0C";
+    DomElements.locationDateTime.textContent = weatherData.dateTime;
 
     // change weather details
     DomElements.detailsWeatherState.querySelector("span").textContent = weatherData.state;
     DomElements.detailsWindSpeed.querySelector("span:last-child").textContent = weatherData.windSpeed + " km/h";
 
     DomElements.detailsHumidityPercentage.querySelector("span:last-child").textContent = weatherData.humidity + "%";
-    
+
 });
 });
 

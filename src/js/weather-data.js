@@ -16,12 +16,13 @@ const formatWeatherData = (weatherData) => {
   const state = weatherData.currentConditions.conditions;
   const windSpeed = weatherData.currentConditions.windspeed;
   const humidity = weatherData.currentConditions.humidity;
-
+  const dateTime = weatherData.currentConditions.datetime;
   return {
     locationName,
     temperature,
     state,
     windSpeed,
-    humidity
+    humidity,
+    dateTime
   };
 };
